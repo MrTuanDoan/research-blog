@@ -1,7 +1,12 @@
 const GITHUB_API_URL =
-  "https://api.github.com/repos/MrTuanDoan/Tuan-RnD/contents/cot-outputs";
+  "https://api.github.com/repos/MrTuanDoan/research-blog/contents/posts";
 const RAW_BASE_URL =
-  "https://raw.githubusercontent.com/MrTuanDoan/Tuan-RnD/master/cot-outputs";
+  "https://raw.githubusercontent.com/MrTuanDoan/research-blog/master/posts";
+
+// No auth needed — research-blog is public
+const GITHUB_HEADERS: Record<string, string> = {
+  Accept: "application/vnd.github.v3+json",
+};
 
 export interface PostMeta {
   slug: string;
@@ -95,7 +100,7 @@ interface GitHubFileEntry {
 export async function getAllPosts(): Promise<PostMeta[]> {
   const res = await fetch(GITHUB_API_URL, {
     next: { revalidate: 3600 },
-    headers: { Accept: "application/vnd.github.v3+json" },
+    headers: GITHUB_HEADERS,
   });
 
   if (!res.ok) {
