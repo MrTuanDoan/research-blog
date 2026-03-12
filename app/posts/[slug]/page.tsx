@@ -1,16 +1,15 @@
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
-import { getPostBySlug, getAllSlugs } from "@/lib/posts";
+import { getPostBySlug } from "@/lib/posts";
 import { MarkdownRenderer } from "@/components/markdown-renderer";
 import { BackButton } from "@/components/back-button";
 
+// Dynamic rendering — fetch at request time so new posts appear immediately
+export const dynamic = "force-dynamic";
+export const revalidate = 0;
+
 interface PostPageProps {
   readonly params: Promise<{ slug: string }>;
-}
-
-export async function generateStaticParams() {
-  const slugs = await getAllSlugs();
-  return slugs.map((slug) => ({ slug }));
 }
 
 export async function generateMetadata({
