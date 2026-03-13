@@ -97,9 +97,13 @@ interface GitHubFileEntry {
   download_url: string | null;
 }
 
-export async function getAllPosts(): Promise<PostMeta[]> {
+export async function getAllPosts(opts?: { fresh?: boolean }): Promise<PostMeta[]> {
+  const cacheOpt = opts?.fresh
+    ? { cache: "no-store" as const }
+    : { next: { revalidate: 3600 } };
+
   const res = await fetch(GITHUB_API_URL, {
-    next: { revalidate: 3600 },
+    ...cacheOpt,
     headers: GITHUB_HEADERS,
   });
 
@@ -120,7 +124,7 @@ export async function getAllPosts(): Promise<PostMeta[]> {
       try {
         const rawUrl = `${RAW_BASE_URL}/${file.name}`;
         const contentRes = await fetch(rawUrl, {
-          next: { revalidate: 3600 },
+          ...cacheOpt,
         });
         if (!contentRes.ok) return null;
 
@@ -146,12 +150,13 @@ export async function getAllPosts(): Promise<PostMeta[]> {
 }
 
 export async function getPostBySlug(slug: string): Promise<Post | null> {
-  const allPosts = await getAllPosts();
+  // Always fetch fresh so new posts are immediately available
+  const allPosts = await getAllPosts({ fresh: true });
   const meta = allPosts.find((p) => p.slug === slug);
   if (!meta) return null;
 
   const rawUrl = `${RAW_BASE_URL}/${meta.filename}`;
-  const res = await fetch(rawUrl, { next: { revalidate: 3600 } });
+  const res = await fetch(rawUrl, { cache: "no-store" });
   if (!res.ok) return null;
 
   const content = await res.text();
