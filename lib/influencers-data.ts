@@ -35,8 +35,109 @@ export const INFLUENCERS: Influencer[] = [
     "name": "CHARACTER BIBLE — Bích Lê",
     "niche": "Đồ ăn vặt, study tools, thời trang học sinh, app review",
     "subtitle": "21, Vietnamese",
-    "imageCount": 1,
-    "images": []
+    "imageCount": 21,
+    "images": [
+      {
+        "file": "bopa-bich-le-bopa-angle-close.jpg",
+        "folder": "bopa",
+        "name": "bich-le-bopa-angle-close"
+      },
+      {
+        "file": "bopa-bich-le-bopa-angle-low.jpg",
+        "folder": "bopa",
+        "name": "bich-le-bopa-angle-low"
+      },
+      {
+        "file": "bopa-bich-le-bopa-angle-overhead.jpg",
+        "folder": "bopa",
+        "name": "bich-le-bopa-angle-overhead"
+      },
+      {
+        "file": "bopa-bich-le-bopa-angle-profile.jpg",
+        "folder": "bopa",
+        "name": "bich-le-bopa-angle-profile"
+      },
+      {
+        "file": "bopa-bich-le-bopa-bg-cafe.jpg",
+        "folder": "bopa",
+        "name": "bich-le-bopa-bg-cafe"
+      },
+      {
+        "file": "bopa-bich-le-bopa-bg-campus.jpg",
+        "folder": "bopa",
+        "name": "bich-le-bopa-bg-campus"
+      },
+      {
+        "file": "bopa-bich-le-bopa-bg-library.jpg",
+        "folder": "bopa",
+        "name": "bich-le-bopa-bg-library"
+      },
+      {
+        "file": "bopa-bich-le-bopa-bg-night.jpg",
+        "folder": "bopa",
+        "name": "bich-le-bopa-bg-night"
+      },
+      {
+        "file": "bopa-bich-le-bopa-outfit-kpop.jpg",
+        "folder": "bopa",
+        "name": "bich-le-bopa-outfit-kpop"
+      },
+      {
+        "file": "bopa-bich-le-bopa-outfit-night.jpg",
+        "folder": "bopa",
+        "name": "bich-le-bopa-outfit-night"
+      },
+      {
+        "file": "bopa-bich-le-bopa-outfit-school.jpg",
+        "folder": "bopa",
+        "name": "bich-le-bopa-outfit-school"
+      },
+      {
+        "file": "bopa-bich-le-bopa-outfit-sporty.jpg",
+        "folder": "bopa",
+        "name": "bich-le-bopa-outfit-sporty"
+      },
+      {
+        "file": "bopa-bich-le-bopa-pose-eating.jpg",
+        "folder": "bopa",
+        "name": "bich-le-bopa-pose-eating"
+      },
+      {
+        "file": "bopa-bich-le-bopa-pose-laugh.jpg",
+        "folder": "bopa",
+        "name": "bich-le-bopa-pose-laugh"
+      },
+      {
+        "file": "bopa-bich-le-bopa-pose-standing.jpg",
+        "folder": "bopa",
+        "name": "bich-le-bopa-pose-standing"
+      },
+      {
+        "file": "bopa-bich-le-bopa-pose-study.jpg",
+        "folder": "bopa",
+        "name": "bich-le-bopa-pose-study"
+      },
+      {
+        "file": "char-sheet-bich-le-char-sheet-v1.jpg",
+        "folder": "char-sheet",
+        "name": "bich-le-char-sheet-v1"
+      },
+      {
+        "file": "macro-bich-le-macro-cheek.jpg",
+        "folder": "macro",
+        "name": "bich-le-macro-cheek"
+      },
+      {
+        "file": "macro-bich-le-macro-dimple.jpg",
+        "folder": "macro",
+        "name": "bich-le-macro-dimple"
+      },
+      {
+        "file": "macro-bich-le-macro-lips.jpg",
+        "folder": "macro",
+        "name": "bich-le-macro-lips"
+      }
+    ]
   },
   {
     "slug": "elena-volkov",
@@ -107,7 +208,7 @@ export const INFLUENCERS: Influencer[] = [
     "name": "Luna Nguyễn — Character Bible",
     "niche": "Lifestyle, fashion, café culture, night city aesthetics, cozy home moments.",
     "subtitle": "22–25, Vietnamese",
-    "imageCount": 9,
+    "imageCount": 10,
     "images": [
       {
         "file": "bopa-luna-nguyen-bopa-angles.jpg",
@@ -128,6 +229,11 @@ export const INFLUENCERS: Influencer[] = [
         "file": "bopa-luna-nguyen-bopa-poses.jpg",
         "folder": "bopa",
         "name": "luna-nguyen-bopa-poses"
+      },
+      {
+        "file": "bopa-luna-nguyen-UP-01.jpg",
+        "folder": "bopa",
+        "name": "luna-nguyen-UP-01"
       },
       {
         "file": "char-sheet-luna-nguyen-char-sheet-v1.jpg",
