@@ -8,65 +8,97 @@ export interface Influencer {
   slug: string;
   name: string;
   niche: string;
-  hasBase: boolean;
+  subtitle: string;
   imageCount: number;
   images: InfluencerImage[];
 }
 
 export const INFLUENCERS: Influencer[] = [
   {
+    "slug": "aiko-nakamura",
+    "name": "Character Bible: Aiko Nakamura (中村あいこ)",
+    "niche": "Café Culture & Coffee Content",
+    "subtitle": "/ Skin Tone** | Japanese-Brazilian — warm tan-olive skin, NC30-NC32, naturally sun-kissed with slight tan lines on wrists from watch |",
+    "imageCount": 1,
+    "images": []
+  },
+  {
     "slug": "amara-obi",
     "name": "Character Bible: Amara Obi",
-    "niche": "** Natural Hair Care & Self-Love Content",
-    "hasBase": true,
+    "niche": "Natural Hair Care & Self-Love Content",
+    "subtitle": "/ Skin Tone** | Nigerian-British — deep rich brown skin, warm mahogany undertone, NC50-NC55 range, naturally luminous |",
     "imageCount": 1,
     "images": []
   },
   {
     "slug": "bich-le",
     "name": "CHARACTER BIBLE — Bích Lê",
-    "niche": "** Đồ ăn vặt, study tools, thời trang học sinh, app review",
-    "hasBase": true,
+    "niche": "Đồ ăn vặt, study tools, thời trang học sinh, app review",
+    "subtitle": "21, Vietnamese",
+    "imageCount": 1,
+    "images": []
+  },
+  {
+    "slug": "elena-volkov",
+    "name": "Character Bible: Elena Volkov",
+    "niche": "Book Reviews & Literary Lifestyle",
+    "subtitle": "/ Skin Tone** | Russian-American — fair with neutral-cool undertone, NC12-NC15, slightly translucent quality at temples, prone to redness around nose in cold |",
+    "imageCount": 1,
+    "images": []
+  },
+  {
+    "slug": "hana-kim",
+    "name": "Character Bible: Hana Kim (김하나)",
+    "niche": "K-Beauty & ASMR Skincare Content",
+    "subtitle": "/ Skin Tone** | Korean — fair cool-toned porcelain skin with pink undertone, NC15 range, glass skin achieved through real routine (not filter) |",
     "imageCount": 1,
     "images": []
   },
   {
     "slug": "hoa-vu",
     "name": "CHARACTER BIBLE — Hoa Vũ",
-    "niche": "** Business, career tips, phong cách công sở, đồng hồ/phụ kiện luxury",
-    "hasBase": true,
+    "niche": "Business, career tips, phong cách công sở, đồng hồ/phụ kiện luxury",
+    "subtitle": "27, Vietnamese",
     "imageCount": 1,
     "images": []
   },
   {
     "slug": "hong-bui",
     "name": "CHARACTER BIBLE — Hồng Bùi",
-    "niche": "** Đồ ngọt, thời trang cô gái, phim ảnh, beauty haul giá mềm",
-    "hasBase": true,
+    "niche": "Đồ ngọt, thời trang cô gái, phim ảnh, beauty haul giá mềm",
+    "subtitle": "20, Vietnamese",
+    "imageCount": 1,
+    "images": []
+  },
+  {
+    "slug": "isla-campbell",
+    "name": "Character Bible: Isla Campbell",
+    "niche": "Sustainable Fashion & Thrift Styling",
+    "subtitle": "/ Skin Tone** | Scottish — very fair with cool pink undertone, NC10-NC15, naturally freckled, prone to flushing |",
     "imageCount": 1,
     "images": []
   },
   {
     "slug": "kim-ngo",
     "name": "CHARACTER BIBLE — Kim Ngô",
-    "niche": "** Mẹ và bé, đồ gia dụng, thực phẩm, skincare cho mẹ",
-    "hasBase": true,
+    "niche": "Mẹ và bé, đồ gia dụng, thực phẩm, skincare cho mẹ",
+    "subtitle": "28, Vietnamese",
     "imageCount": 1,
     "images": []
   },
   {
     "slug": "lan-dao",
     "name": "CHARACTER BIBLE — Lan Đào",
-    "niche": "** Du lịch, kem chống nắng, đồ bơi, lifestyle outdoor",
-    "hasBase": true,
+    "niche": "Du lịch, kem chống nắng, đồ bơi, lifestyle outdoor",
+    "subtitle": "24, Vietnamese",
     "imageCount": 1,
     "images": []
   },
   {
     "slug": "linh-pham",
     "name": "CHARACTER BIBLE — Linh Phạm",
-    "niche": "** Skincare, đồ uống, thời trang casual",
-    "hasBase": true,
+    "niche": "Skincare, đồ uống, thời trang casual",
+    "subtitle": "22, Vietnamese",
     "imageCount": 1,
     "images": []
   },
@@ -74,7 +106,7 @@ export const INFLUENCERS: Influencer[] = [
     "slug": "luna-nguyen",
     "name": "Luna Nguyễn — Character Bible",
     "niche": "Lifestyle, fashion, café culture, night city aesthetics, cozy home moments.",
-    "hasBase": true,
+    "subtitle": "22–25, Vietnamese",
     "imageCount": 9,
     "images": [
       {
@@ -122,40 +154,80 @@ export const INFLUENCERS: Influencer[] = [
   {
     "slug": "mai-tran",
     "name": "CHARACTER BIBLE — Mai Trần",
-    "niche": "** Makeup, nước hoa, thời trang nữ tính",
-    "hasBase": true,
+    "niche": "Makeup, nước hoa, thời trang nữ tính",
+    "subtitle": "25, Vietnamese",
+    "imageCount": 1,
+    "images": []
+  },
+  {
+    "slug": "maren-eriksen",
+    "name": "Character Bible: Maren Eriksen",
+    "niche": "Outdoor Adventure & Nature Photography",
+    "subtitle": "|, / Skin Tone** | Norwegian — fair with cool pink undertone, NC10-NC12, wind-chapped redness on cheeks and nose that's permanent, sun-weathered for her age |",
     "imageCount": 1,
     "images": []
   },
   {
     "slug": "mei-chen",
     "name": "Character Bible: Mei Chen (陈美)",
-    "niche": "** Wellness Tea & Traditional Chinese Medicine Lifestyle",
-    "hasBase": true,
+    "niche": "Wellness Tea & Traditional Chinese Medicine Lifestyle",
+    "subtitle": "/ Skin Tone** | Chinese-American — porcelain-fair warm ivory skin, NC15-NC20 range, slight natural flush on cheeks |",
+    "imageCount": 1,
+    "images": []
+  },
+  {
+    "slug": "nadia-khoury",
+    "name": "Character Bible: Nadia Khoury",
+    "niche": "Minimalist Home Design & Lifestyle",
+    "subtitle": "/ Skin Tone** | Lebanese-French — warm olive skin with golden undertone, NC25-NC30, naturally even with slight sun-warmth on nose and cheeks |",
     "imageCount": 1,
     "images": []
   },
   {
     "slug": "sofia-reyes",
     "name": "Character Bible: Sofia Reyes",
-    "niche": "** Fitness & Active Lifestyle (Latina market + English crossover)",
-    "hasBase": true,
+    "niche": "Fitness & Active Lifestyle (Latina market + English crossover)",
+    "subtitle": "/ Skin Tone** | Mexican-American — warm olive-bronze skin, NC35-NC40 range, sun-kissed with natural tan lines on shoulders |",
     "imageCount": 1,
     "images": []
   },
   {
     "slug": "thu-hoang",
     "name": "CHARACTER BIBLE — Thu Hoàng",
-    "niche": "** Thời trang high fashion, trang điểm bold, phụ kiện statement, editorial looks",
-    "hasBase": true,
+    "niche": "Thời trang high fashion, trang điểm bold, phụ kiện statement, editorial looks",
+    "subtitle": "26, Vietnamese",
     "imageCount": 1,
     "images": []
   },
   {
     "slug": "thuy-nguyen",
     "name": "CHARACTER BIBLE — Thùy Nguyễn",
-    "niche": "** Fitness, thực phẩm healthy, supplement, activewear",
-    "hasBase": true,
+    "niche": "Fitness, thực phẩm healthy, supplement, activewear",
+    "subtitle": "23, Vietnamese",
+    "imageCount": 1,
+    "images": []
+  },
+  {
+    "slug": "yen-duong",
+    "name": "CHARACTER BIBLE — Yến Dương",
+    "niche": "Lifestyle Sài Gòn, review quán ăn, streetwear, xe máy và đường phố",
+    "subtitle": "25, Vietnamese",
+    "imageCount": 1,
+    "images": []
+  },
+  {
+    "slug": "yuki-tanaka",
+    "name": "Character Bible: Yuki Tanaka (田中ゆき)",
+    "niche": "Stationery, Journaling & Cozy Productivity",
+    "subtitle": "/ Skin Tone** | Japanese — fair neutral-warm skin, NC15-NC18, smooth with subtle warmth on cheeks |",
+    "imageCount": 1,
+    "images": []
+  },
+  {
+    "slug": "zara-hassan",
+    "name": "Character Bible: Zara Hassan",
+    "niche": "Tech Reviews & Productivity Setup Content",
+    "subtitle": "/ Skin Tone** | Pakistani-Canadian — warm brown skin with olive undertone, NC40-NC42, smooth and even with slight hyperpigmentation around eyes (natural) |",
     "imageCount": 1,
     "images": []
   }

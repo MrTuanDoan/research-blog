@@ -6,12 +6,15 @@ export function generateStaticParams() {
   return INFLUENCERS.map((inf) => ({ slug: inf.slug }));
 }
 
-export function generateMetadata({ params }: { params: { slug: string } }) {
-  const inf = INFLUENCERS.find((i) => i.slug === params.slug);
+type Props = { params: Promise<{ slug: string }> };
+
+export async function generateMetadata({ params }: Props) {
+  const { slug } = await params;
+  const inf = INFLUENCERS.find((i) => i.slug === slug);
   if (!inf) return {};
   return {
     title: `${inf.name} — AI Influencer`,
-    description: `${inf.name} character gallery — ${inf.imageCount} images. ${inf.niche}`,
+    description: `${inf.name} · ${inf.niche || inf.subtitle} · ${inf.imageCount} images`,
   };
 }
 
@@ -23,11 +26,11 @@ const FOLDER_LABELS: Record<string, string> = {
   video: "Video Frames",
 };
 
-export default function InfluencerPage({ params }: { params: { slug: string } }) {
-  const inf = INFLUENCERS.find((i) => i.slug === params.slug);
+export default async function InfluencerPage({ params }: Props) {
+  const { slug } = await params;
+  const inf = INFLUENCERS.find((i) => i.slug === slug);
   if (!inf) notFound();
 
-  // Group images by folder
   const groups: Record<string, typeof inf.images> = {};
   for (const img of inf.images) {
     if (!groups[img.folder]) groups[img.folder] = [];
@@ -39,51 +42,54 @@ export default function InfluencerPage({ params }: { params: { slug: string } })
       {/* Nav */}
       <div style={{ padding: "1rem 1.5rem", borderBottom: "1px solid #1a1a1a" }}>
         <Link href="/influencers" style={{ color: "#888", textDecoration: "none", fontSize: "0.8rem" }}>
-          &larr; All Influencers
+          ← All Influencers
         </Link>
       </div>
 
       {/* Hero */}
       <div style={{ display: "flex", gap: "2rem", padding: "2rem 1.5rem", alignItems: "flex-start", flexWrap: "wrap" }}>
-        {/* Base portrait */}
-        <div style={{ width: "240px", flexShrink: 0 }}>
+        <div style={{ width: "260px", flexShrink: 0, borderRadius: "4px", overflow: "hidden" }}>
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src={`/influencers/${inf.slug}/base.jpg`}
             alt={inf.name}
-            style={{ width: "100%", borderRadius: "4px", display: "block" }}
+            style={{ width: "100%", display: "block" }}
           />
         </div>
-        {/* Info */}
         <div style={{ flex: 1, minWidth: "200px", paddingTop: "0.5rem" }}>
-          <h1 style={{ fontSize: "1.8rem", fontWeight: 700, margin: "0 0 0.5rem", letterSpacing: "-0.02em" }}>
+          <h1 style={{ fontSize: "1.8rem", fontWeight: 700, margin: "0 0 0.4rem", letterSpacing: "-0.02em" }}>
             {inf.name}
           </h1>
-          {inf.niche && (
-            <p style={{ color: "#888", fontSize: "0.85rem", margin: "0 0 1rem" }}>{inf.niche}</p>
+          {inf.subtitle && (
+            <p style={{ color: "#666", fontSize: "0.8rem", margin: "0 0 0.3rem" }}>{inf.subtitle}</p>
           )}
-          <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap" }}>
-            <span style={{ background: "#1a1a1a", padding: "0.3rem 0.7rem", borderRadius: "999px", fontSize: "0.7rem", color: "#f59e0b", fontFamily: "monospace" }}>
+          {inf.niche && (
+            <p style={{ color: "#888", fontSize: "0.85rem", margin: "0 0 1.2rem" }}>{inf.niche}</p>
+          )}
+          <div style={{ display: "flex", gap: "0.6rem", flexWrap: "wrap" }}>
+            <span style={{ background: "#1a1a1a", padding: "0.3rem 0.75rem", borderRadius: "999px", fontSize: "0.7rem", color: "#f59e0b", fontFamily: "monospace" }}>
               {inf.imageCount} images
             </span>
-            <span style={{ background: "#1a1a1a", padding: "0.3rem 0.7rem", borderRadius: "999px", fontSize: "0.7rem", color: "#888", fontFamily: "monospace" }}>
-              {Object.keys(groups).length} categories
-            </span>
+            {Object.keys(groups).length > 0 && (
+              <span style={{ background: "#1a1a1a", padding: "0.3rem 0.75rem", borderRadius: "999px", fontSize: "0.7rem", color: "#888", fontFamily: "monospace" }}>
+                {Object.keys(groups).length} categories
+              </span>
+            )}
           </div>
         </div>
       </div>
 
-      {/* Image sections by folder */}
+      {/* Image sections */}
       {Object.entries(groups).map(([folder, imgs]) => (
         <section key={folder} style={{ padding: "0 1.5rem 2.5rem" }}>
-          <h2 style={{ fontSize: "0.7rem", fontFamily: "monospace", color: "#f59e0b", letterSpacing: "0.12em", textTransform: "uppercase", marginBottom: "0.75rem", borderBottom: "1px solid #1a1a1a", paddingBottom: "0.5rem" }}>
+          <h2 style={{
+            fontSize: "0.65rem", fontFamily: "monospace", color: "#f59e0b",
+            letterSpacing: "0.12em", textTransform: "uppercase",
+            margin: "0 0 0.75rem", borderBottom: "1px solid #1a1a1a", paddingBottom: "0.5rem"
+          }}>
             {FOLDER_LABELS[folder] || folder}
           </h2>
-          <div style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fill, minmax(200px, 1fr))",
-            gap: "3px",
-          }}>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(200px, 1fr))", gap: "3px" }}>
             {imgs.map((img) => (
               <div key={img.file} style={{ position: "relative", background: "#111", overflow: "hidden", aspectRatio: "3/4" }}>
                 {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -108,12 +114,12 @@ export default function InfluencerPage({ params }: { params: { slug: string } })
 
       {inf.images.length === 0 && (
         <div style={{ padding: "3rem 1.5rem", textAlign: "center", color: "#444", fontSize: "0.85rem" }}>
-          Only base portrait available. More content coming soon.
+          Only base portrait available — more content coming soon.
         </div>
       )}
 
       <div style={{ padding: "2rem", textAlign: "center", color: "#333", fontSize: "0.7rem", borderTop: "1px solid #1a1a1a" }}>
-        mrtuandoan-blog.vercel.app &middot; AI Influencer System
+        mrtuandoan-blog.vercel.app · AI Influencer System
       </div>
     </main>
   );

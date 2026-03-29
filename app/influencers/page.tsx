@@ -3,12 +3,17 @@ import { INFLUENCERS } from "@/lib/influencers-data";
 
 export const metadata = {
   title: "AI Influencer Gallery",
-  description: "23 AI-generated influencers — portraits, character sheets, macro shots, BOPA poses",
+  description: "AI-generated influencers — portraits, character sheets, macro shots, BOPA poses",
 };
 
 export default function InfluencersPage() {
   return (
     <main style={{ minHeight: "100vh", background: "#0a0a0a", color: "#fff", fontFamily: "system-ui, sans-serif" }}>
+      <style>{`
+        .inf-card img { transition: transform 0.35s ease; }
+        .inf-card:hover img { transform: scale(1.05); }
+      `}</style>
+
       {/* Header */}
       <div style={{ borderBottom: "1px solid #1a1a1a", padding: "2.5rem 2rem", textAlign: "center" }}>
         <h1 style={{ fontSize: "2rem", fontWeight: 700, margin: 0, letterSpacing: "-0.03em" }}>
@@ -31,25 +36,17 @@ export default function InfluencersPage() {
           <Link
             key={inf.slug}
             href={`/influencers/${inf.slug}`}
+            className="inf-card"
             style={{ textDecoration: "none", color: "inherit", display: "block" }}
           >
-            <div style={{
-              position: "relative",
-              background: "#111",
-              overflow: "hidden",
-              aspectRatio: "3/4",
-              cursor: "pointer",
-            }}>
+            <div style={{ position: "relative", background: "#111", overflow: "hidden", aspectRatio: "3/4" }}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src={`/influencers/${inf.slug}/base.jpg`}
                 alt={inf.name}
-                style={{ width: "100%", height: "100%", objectFit: "cover", display: "block", transition: "transform 0.3s ease" }}
+                style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
                 loading="lazy"
-                onMouseOver={(e) => (e.currentTarget.style.transform = "scale(1.04)")}
-                onMouseOut={(e) => (e.currentTarget.style.transform = "scale(1)")}
               />
-              {/* Overlay */}
               <div style={{
                 position: "absolute", bottom: 0, left: 0, right: 0,
                 background: "linear-gradient(transparent, rgba(0,0,0,0.92))",
@@ -68,7 +65,6 @@ export default function InfluencersPage() {
         ))}
       </div>
 
-      {/* Footer */}
       <div style={{ padding: "2rem", textAlign: "center", color: "#333", fontSize: "0.7rem", borderTop: "1px solid #1a1a1a", marginTop: "2px" }}>
         mrtuandoan-blog.vercel.app &middot; AI Influencer System
       </div>
