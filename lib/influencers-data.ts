@@ -35,7 +35,7 @@ export const INFLUENCERS: Influencer[] = [
     "name": "CHARACTER BIBLE — Bích Lê",
     "niche": "Đồ ăn vặt, study tools, thời trang học sinh, app review",
     "subtitle": "21, Vietnamese",
-    "imageCount": 21,
+    "imageCount": 30,
     "images": [
       {
         "file": "bopa-bich-le-bopa-angle-close.jpg",
@@ -136,6 +136,51 @@ export const INFLUENCERS: Influencer[] = [
         "file": "macro-bich-le-macro-lips.jpg",
         "folder": "macro",
         "name": "bich-le-macro-lips"
+      },
+      {
+        "file": "bopa-up-bich-le-UP-01.jpg",
+        "folder": "bopa-up",
+        "name": "UP-01 Lying Reading"
+      },
+      {
+        "file": "bopa-up-bich-le-UP-02.jpg",
+        "folder": "bopa-up",
+        "name": "UP-02 Leaning Back Seated"
+      },
+      {
+        "file": "bopa-up-bich-le-UP-02B.jpg",
+        "folder": "bopa-up",
+        "name": "UP-02B Seated City Gaze"
+      },
+      {
+        "file": "bopa-up-bich-le-UP-02C.jpg",
+        "folder": "bopa-up",
+        "name": "UP-02C Straight Back Window"
+      },
+      {
+        "file": "bopa-up-bich-le-UP-02D.jpg",
+        "folder": "bopa-up",
+        "name": "UP-02D Lying with Cat on Chest"
+      },
+      {
+        "file": "bopa-up-bich-le-UP-02E.jpg",
+        "folder": "bopa-up",
+        "name": "UP-02E Lying with Cat Beside"
+      },
+      {
+        "file": "bopa-up-bich-le-UP-02F.jpg",
+        "folder": "bopa-up",
+        "name": "UP-02F Lying Using Laptop"
+      },
+      {
+        "file": "bopa-up-bich-le-UP-02G.jpg",
+        "folder": "bopa-up",
+        "name": "UP-02G Lying MacBook City Watch"
+      },
+      {
+        "file": "bopa-up-bich-le-UP-02H.jpg",
+        "folder": "bopa-up",
+        "name": "UP-02H Seated Eating Ice Cream"
       }
     ]
   },
