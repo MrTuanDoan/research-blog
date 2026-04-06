@@ -431,20 +431,93 @@ Layer 4 — Franchise (depends on series traction):
 
 ---
 
-## [SOLVE] Production Queue
+## [SOLVE] Level-by-Level Execution
 
-### Wave 1 — Validate (Tuần 1)
-**Ep 1:** Sư Tử Hống × Tai nghe chống ồn — $3.80 — đơn giản nhất, single-action per character
+### Level 0 — Formula ✅ (DONE)
+```
+[Võ Công + Property đặc trưng] → [Sản phẩm khắc chế] → [3-act comedy] → [Deadpan pitch]
+```
 
-### Wave 2 — Diversify (Tuần 2)
-**Ep 2:** Ngũ Độc Chưởng × Nước rửa tay — $3.80
-**Ep 3:** Hàn Băng Chưởng × Áo HeatTech — $3.80
+### Level 1 — Top 10 Võ Công × Sản Phẩm (Actionable Ngay)
 
-### Wave 3 — Brand Outreach (Tuần 3–4)
-Với data từ Ep 1–3 → pitch brands trực tiếp
+| # | Võ Công | Property | Sản Phẩm | Brand |
+|---|---|---|---|---|
+| 1 | Sư Tử Hống | Tiếng ồn chói tai | Tai nghe chống ồn | JBL, Sony, Bose |
+| 2 | Ngũ Độc Chưởng | Vi khuẩn, độc | Nước rửa tay | Dettol, Lifebuoy |
+| 3 | Lăng Ba Vi Bộ | Chạy nhanh | Giày thể thao | Nike, Adidas |
+| 4 | Hàn Băng Chưởng | Lạnh kinh người | Máy sưởi | Xiaomi, Dyson |
+| 5 | Thôi Miên Thuật | Nhìn vào mắt | Kính mắt | Ray-Ban |
+| 6 | Hút Tinh Đại Pháp | Hút hết nội lực | Pin dự phòng | Anker |
+| 7 | Khinh Công | Nhảy cao phi thường | Giày cầu lông | Yonex |
+| 8 | Đàn Chỉ Thần Thông | Búng ngón tay có lực | Gel dưỡng móng tay | OPI |
+| 9 | Hổ Hạc Song Hình Quyền | Bắt chước hổ + hạc | App fitness | Freeletics |
+| 10 | Vô Ảnh Cước | Đá mà không thấy | Camera an ninh | Xiaomi |
 
-### Wave 4 — Scale (Tháng 2+)
-2 episodes/week → 8 episodes/month → $30/month production cost → brand deal value: $500–5,000/episode
+### Level 2 — Seedance 2.0 Prompt Template (Universal)
+
+```
+[Period: Ancient China wuxia setting].
+[Character A: martial arts master in traditional robes]
+[performs: SPECIFIC MOVE with dramatic VFX — fog, particles, slow-mo].
+[Character B: modern person, casual clothing]
+[calmly uses: SPECIFIC MODERN PRODUCT to counter — close-up product shot].
+[Result: dramatic comedic fall — Character A sits down confused, deflated].
+Cinematic slow-motion, dynamic dramatic lighting, wuxia aesthetic mixed
+with modern product close-up. AUDIO: [epic wuxia OST 0–8s],
+[record scratch 8–10s], [modern product jingle 12–15s].
+```
+
+### Level 3 — 15-Second Video Structure (Tight Format)
+
+```
+Frame 0–3s:   SETUP    — Kiếm khách đối đầu. Nhạc kiếm hiệp epic. Fog.
+Frame 3–8s:   CONFLICT — Thi triển võ công. VFX đẹp. Slow-mo. Peak intensity.
+Frame 8–12s:  PAYOFF   — Sản phẩm xuất hiện. Võ công thất bại.
+              [KEY MOMENT: reaction shot — ngồi xuống, confused, pouting]
+Frame 12–15s: TAG      — Deadpan product description. Logo. Tagline.
+```
+
+**Sound design:**
+- 0–8s: Epic wuxia soundtrack (guzheng, erhu, dramatic percussion)
+- 8–12s: Record scratch / comedic deflation sound
+- 12–15s: Modern product jingle (2 giây)
+
+### Level 4 — Distribution Strategy
+
+| Platform | Priority | Format | Lý Do |
+|---|---|---|---|
+| TikTok | Primary | 15–30s | Algorithm favors short comedy, largest Gen Z audience |
+| YouTube Shorts | Secondary | 30–60s | Better monetization, searchable |
+| Facebook Reels | Tertiary | 30s | Older demographic, higher purchasing power (kiếm hiệp nostalgia mạnh) |
+| Instagram Reels | Quaternary | 15–30s | Visual quality showcase |
+
+**Post frequency:** 1 per day minimum for algorithm momentum
+
+### Level 5 — Monetization Path (Follower-Gated)
+
+| Milestone | Action | Revenue |
+|---|---|---|
+| 0–1K followers | Build format, test retention, A/B hook types | $0 (invest) |
+| 1K–10K | Affiliate links trong bio | $0.50–5/sale |
+| 10K–50K | DM brands cho sponsored placement | $200–500/video |
+| 50K+ | Brand packages | $500–5,000/video |
+| 100K+ | Series IP sell hoặc exclusive brand partnership | $5,000–50,000/season |
+
+### Production Queue
+
+**Wave 1 — Validate Pipeline (Tuần 1):**
+Ep 1: Sư Tử Hống × Tai nghe — $3.80 — simplest, single action per character
+
+**Wave 2 — Diversify (Tuần 2):**
+Ep 2: Ngũ Độc × Nước rửa tay — $3.80
+Ep 3: Hút Tinh Đại Pháp × Pin dự phòng — $3.80 (Anker viral potential cao)
+
+**Wave 3 — Brand Outreach (Tuần 3–4):**
+Data từ Ep 1–3 → pitch brands trực tiếp với metrics
+
+**Wave 4 — Scale (Tháng 2+):**
+1 ep/ngày → 30 eps/month → $114/month production cost
+Brand deal value at 50K+: $500–5,000/ep → ROI 4,000–44,000%
 
 ---
 
@@ -490,3 +563,55 @@ Với data từ Ep 1–3 → pitch brands trực tiếp
 
 *MASTER COT — Merged: Antigravity Session + MTDFirstOpenClaw Session*
 *Date: 2026-04-06 | Best-of-both synthesis*
+
+
+---
+
+## [VERIFY] FINAL Checklist v4
+
+- [x] Hook analysis (3 tầng, 0.5 giây frame đầu đủ)
+- [x] Comedy structure (Incongruity + Reversal + Deadpan — simultaneous)
+- [x] Retention mechanics (4 micro-loops, 70–80% completion predicted)
+- [x] Viral mechanics (comment bait, duet/stitch, participation invite)
+- [x] Product integration (anti-ad framework, demo-first, neuroscience recall)
+- [x] Võ công × Sản phẩm matrix (20 combinations codified, 50+ potential)
+- [x] Seedance 2.0 prompt template (universal copy-paste ready)
+- [x] 15-second tight structure (frame-by-frame + sound design)
+- [x] AI production (pipeline, $3.80/ep)
+- [x] Format simplicity (4 acts, 2 characters, infinite scale)
+- [x] Cultural arbitrage (500M addressable, exotic+funny = global)
+- [x] Meme lifecycle (5 phases — target Phase 3–4 for brand deals)
+- [x] Content velocity advantage (1 person × 2–3h vs 1 team × 2 tuần)
+- [x] Distribution strategy (4 platforms + daily frequency)
+- [x] Monetization path (5 follower milestones, $500–50K/season ceiling)
+- [x] Risk analysis (IP, brand, drift, content moderation)
+- [x] Scaffold roadmap (5 levels + 4-wave production queue)
+
+**ONE-SENTENCE ANSWER:**
+> *"Võ Công × Product = content machine dễ AI-generate ($3.80/video), viral potential cực cao (9.5/10), nhân bản vô hạn vì kho võ công không bao giờ cạn — và đây là anti-ad format người xem chủ động share."*
+
+---
+
+## TIER S SCORECARD — FINAL
+
+| Dimension | Score | Insight |
+|---|---|---|
+| Hook | 9.5/10 | Frame đầu tiên đã đủ — không cần đến giây 3 |
+| Comedy | 9/10 | 3 lớp humor đồng thời — universal, safe, không offensive |
+| Retention | 9/10 | 4 micro-loops, 70–80% completion predicted |
+| Viral | 9.5/10 | Invites participation — comment section tự generate |
+| Product integration | 9/10 | Demo-first, anti-ad, dopamine-brand association |
+| Series potential | 10/10 | 50+ episodes, compound flywheel, meme lifecycle |
+| Format simplicity | 10/10 | 4 acts, 2 chars, $3.80/ep, infinite scale |
+| AI production fit | 8/10 | Seedance wuxia = strong, 2-char drift = manageable |
+| Business model | 9/10 | 5 monetization paths, $500–50K/season ceiling |
+
+**Immediate 3 Actions:**
+1. Generate 2 character images (NanoBanana 2) — 15 phút, $0.28
+2. Produce Episode 1: Sư Tử Hống × Tai nghe — $3.80, 2–3 giờ
+3. Post organic → measure completion rate + comments → brand pitch sau 100K views
+
+---
+
+*SERIES BIBLE v4 FINAL — Merged: Antigravity + MTDFirstOpenClaw (all 3 parts complete)*
+*Date: 2026-04-06*
