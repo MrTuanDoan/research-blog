@@ -317,6 +317,58 @@ Brand launch challenge → users make their own version → exponential reach
 
 ---
 
+### E. Cultural Arbitrage — Insight Bổ Sung (MTDFirstOpenClaw)
+
+**Arbitrage formula:**
+> Niche cultural knowledge (kiếm hiệp) × Universal product = Global audience thấy "exotic + funny"
+
+Video có thể viral ở Nhật, Mỹ, Brazil — họ không cần hiểu "Sư Tử Hống" để thấy hài. Cổ trang + product + humiliation = universal language.
+
+**Diaspora multiplier:** Việt kiều, Hoa kiều chia sẻ vì *"OMG người Việt làm cái này!"* → secondary viral wave hoàn toàn tự phát.
+
+### F. Neuroscience of Brand Recall
+
+> Humor releases dopamine → dopamine được associate với brand
+
+Product placement trong comedy = **positive neurological association**.
+Người xem nhớ brand VÌ HỌ CƯỜI, không vì bị annoyed.
+Đây là lý do comedy ads (Old Spice, Geico, Deadpool) outperform serious ads về long-term recall.
+
+### G. Meme Lifecycle — 5 Phases
+
+| Phase | Timeline | Trạng thái | Action |
+|---|---|---|---|
+| 1 — Viral | Week 1–2 | Original video viral, format xuất hiện | Post Ep 1–3 organic |
+| 2 — Copy | Week 3–4 | Creators copy format, brand awareness lên | Pitch brands với data |
+| 3 — Template | Week 5–8 | Format thành recognized meme template | Series sponsorship deals |
+| 4 — Iconic | Month 3+ | Brands pay premium to be IN the format | Premium pricing |
+| 5 — Classic | Long-term | Format bão hòa nhưng classic clips vẫn share | Archive + evergreen |
+
+**Mục tiêu:** Arrive at Phase 3–4 với brand deals đã signed. Classic clips tiếp tục generate views vĩnh viễn.
+
+### H. Content Velocity — AI Advantage
+
+| | Traditional Production | AI Pipeline (Seedance 2.0) |
+|---|---|---|
+| 1 video | 1 team × 2 tuần | 1 người × 2–3 giờ |
+| Weekly output | 1 video/2 tuần | 3–5 videos/ngày |
+| Cost per video | $500–5,000 | $3.80 |
+| Scale ceiling | Team size | API rate limits |
+
+**Competitive moat:** Tốc độ + consistency + distribution. Không ai làm được 5 videos/ngày ở quality này với team truyền thống.
+
+### I. Creator Economy Models
+
+| Model | Cơ chế | Timeline | Revenue |
+|---|---|---|---|
+| **Brand placement** | Creator làm video, brand pay for integration | Sau 100K+ views | $500–5,000/ep |
+| **Affiliate** | Creator earn per purchase qua link | Ngay từ Ep 1 | $0.50–5/sale |
+| **Series sponsorship** | Brand own một võ công cho cả season | Sau 500K+ views | $5,000–50,000/season |
+| **Template licensing** | Sell production template to other creators | Sau format proven | $200–500/license |
+| **UGC challenge** | Brand launch challenge, creator gets fee | Month 3+ | Flat fee + commission |
+
+---
+
 # PHẦN 2: SCAFFOLD — PRODUCTION ROADMAP
 
 ## [DECOMPOSE] 5 Atomic Problems
