@@ -1,4 +1,4 @@
-﻿# COT: Claude Cowork vs OpenClaw — Should We Use It?
+# COT: Claude Cowork vs OpenClaw — Should We Use It?
 
 **Source:** https://x.com/i/status/2036853598793994449
 **Date:** 2026-03-26

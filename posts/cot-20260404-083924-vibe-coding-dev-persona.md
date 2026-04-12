@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Building a Vibe Coding Dev Persona from Boris Cherny's Workflow"
 date: "2026-04-04"
 description: "What Boris Cherny's Claude Code system reveals about the identity, philosophy, habits and language of the vibe coding developer archetype."

@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Which MCP Servers to Install for Our Stack"
 date: "2026-04-11"
 description: "Priority analysis of 15 MCP servers. Context7, Memory, Sequential Thinking, and GitHub are Tier 1 for our Knox pipeline and Seedance workflow."

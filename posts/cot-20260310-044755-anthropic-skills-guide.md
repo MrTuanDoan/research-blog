@@ -1,4 +1,4 @@
-﻿# /cot — The Complete Guide to Building Skills for Claude (Anthropic)
+# /cot — The Complete Guide to Building Skills for Claude (Anthropic)
 **Source:** https://resources.anthropic.com/hubfs/The-Complete-Guide-to-Building-Skill-for-Claude.pdf
 **Date:** 2026-03-10
 **Model:** claude-opus-4.6

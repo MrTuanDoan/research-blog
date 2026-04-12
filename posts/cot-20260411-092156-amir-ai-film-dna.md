@@ -1,4 +1,4 @@
-﻿---
+---
 title: "DNA Analysis — Amir's \ AI Film Guide"
 date: "2026-04-11"
 description: "7 core principles from 561 shots and \ Seedance spend: micro-actions, impossible contrast, objects over faces, cost/obstacle, VHS style, chain shots, compound loop."

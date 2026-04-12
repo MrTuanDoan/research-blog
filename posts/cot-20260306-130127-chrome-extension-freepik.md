@@ -1,4 +1,4 @@
-﻿# /cot — Chrome Extension tự động hóa Freepik.com
+# /cot — Chrome Extension tự động hóa Freepik.com
 
 **Date:** 2026-03-06  
 **Task:** Thiết kế chiến lược xây dựng Chrome Extension để automate thao tác trên Freepik, bao gồm record & replay workflow.

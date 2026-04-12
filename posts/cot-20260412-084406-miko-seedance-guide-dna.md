@@ -1,4 +1,4 @@
-﻿---
+---
 title: "DNA Analysis — Miko's Seedance 2.0 Full Guide"
 date: "2026-04-12"
 description: "Core principles from Miko's Seedance 2.0 system: @ reference, timestamp precision, voice ID cloning, extension chaining, Canva bypass."
