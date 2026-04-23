@@ -38,6 +38,36 @@ function slugFromFilename(filename: string): string {
 }
 
 // ---------------------------------------------------------------------------
+// YAML frontmatter parser (no external deps)
+// ---------------------------------------------------------------------------
+
+interface FrontMatter {
+  title?: string;
+  date?: string;
+  description?: string;
+  source?: string;
+}
+
+function parseFrontmatter(content: string): { meta: FrontMatter; body: string } {
+  const fmMatch = content.match(/^---\r?\n([\s\S]*?)\r?\n---\r?\n([\s\S]*)$/);
+  if (!fmMatch) return { meta: {}, body: content };
+
+  const yamlBlock = fmMatch[1];
+  const body = fmMatch[2];
+  const meta: FrontMatter = {};
+
+  for (const line of yamlBlock.split("\n")) {
+    const kv = line.match(/^(\w+):\s*"?([^"]+?)"?\s*$/);
+    if (kv) {
+      const key = kv[1] as keyof FrontMatter;
+      meta[key] = kv[2].trim();
+    }
+  }
+
+  return { meta, body };
+}
+
+// ---------------------------------------------------------------------------
 // Metadata extraction from markdown content
 // ---------------------------------------------------------------------------
 
@@ -98,9 +128,8 @@ interface GitHubFileEntry {
 }
 
 export async function getAllPosts(opts?: { fresh?: boolean }): Promise<PostMeta[]> {
-  const cacheOpt = opts?.fresh
-    ? { cache: "no-store" as const }
-    : { next: { revalidate: 3600 } };
+  // Always fetch fresh — list + content must reflect latest pushes immediately
+  const cacheOpt = { cache: "no-store" as const };
 
   const res = await fetch(GITHUB_API_URL, {
     ...cacheOpt,
@@ -123,18 +152,24 @@ export async function getAllPosts(opts?: { fresh?: boolean }): Promise<PostMeta[
     mdFiles.map(async (file): Promise<PostMeta | null> => {
       try {
         const rawUrl = `${RAW_BASE_URL}/${file.name}`;
-        const contentRes = await fetch(rawUrl, {
-          ...cacheOpt,
-        });
+        const contentRes = await fetch(rawUrl, cacheOpt);
         if (!contentRes.ok) return null;
 
-        const content = await contentRes.text();
+        const rawContent = await contentRes.text();
+        const { meta: fm, body } = parseFrontmatter(rawContent);
+
+        // Prefer YAML frontmatter values, fall back to inline markdown extraction
+        const title = fm.title || extractTitle(body);
+        const date = fm.date || extractDate(body);
+        const source = fm.source || extractSource(body);
+        const excerpt = fm.description || extractExcerpt(body);
+
         return {
           slug: slugFromFilename(file.name),
-          title: extractTitle(content),
-          date: extractDate(content),
-          source: extractSource(content),
-          excerpt: extractExcerpt(content),
+          title,
+          date,
+          source,
+          excerpt,
           filename: file.name,
         };
       } catch {
@@ -159,8 +194,10 @@ export async function getPostBySlug(slug: string): Promise<Post | null> {
   const res = await fetch(rawUrl, { cache: "no-store" });
   if (!res.ok) return null;
 
-  const content = await res.text();
-  return { ...meta, content };
+  const rawContent = await res.text();
+  // Strip YAML frontmatter before rendering so it doesn't appear as raw text
+  const { body } = parseFrontmatter(rawContent);
+  return { ...meta, content: body };
 }
 
 export async function getAllSlugs(): Promise<string[]> {
